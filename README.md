@@ -1,2 +1,35 @@
-# FCFS-CPU-Scheduling
-A visual simulation of the FCFS CPU scheduling algorithm with process management, animated Gantt chart, waiting time and turnaround time calculations.
+# شبیه‌ساز الگوریتم زمان‌بندی FCFS
+
+این پروژه یک شبیه‌ساز آموزشی برای الگوریتم **First Come, First Served (FCFS)** در درس سیستم‌عامل است.
+
+## امکانات
+- افزودن فرایند با زمان ورود (Arrival Time) و زمان اجرای CPU (Burst Time)
+- مرتب‌سازی فرایندها بر اساس زمان ورود
+- نمایش گانت چارت
+- انیمیشن اجرای مرحله‌به‌مرحله فرایندها روی CPU
+- شروع، مکث و شروع مجدد شبیه‌سازی
+- محاسبه زمان انتظار (Waiting Time) و زمان بازگشت (Turnaround Time)
+- محاسبه میانگین زمان انتظار و بازگشت
+
+## اجرای پروژه
+فایل `index.html` را در مرورگر باز کنید. برای انتشار آنلاین می‌توانید GitHub Pages را فعال کنید.
+
+## فرمول‌ها
+- زمان شروع: `Start = max(زمان پایان فرایند قبلی، زمان ورود فرایند فعلی)`
+- زمان پایان: `Completion Time = Start + Burst Time`
+- زمان انتظار: `Waiting Time = Start - Arrival Time`
+- زمان بازگشت: `Turnaround Time = Completion Time - Arrival Time`
+
+## مثال پیش‌فرض
+| Process | Arrival Time | Burst Time |
+|---|---:|---:|
+| P1 | 0 | 5 |
+| P2 | 1 | 3 |
+| P3 | 2 | 8 |
+| P4 | 4 | 2 |
+
+## نکته علمی
+FCFS یک الگوریتم **غیرقابل‌وقفه (Non-preemptive)** است؛ پس پس از شروع اجرای یک فرایند، اجرای آن تا پایان ادامه پیدا می‌کند. اگر CPU بیکار باشد، تا رسیدن فرایند بعدی منتظر می‌ماند.
+
+---
+پروژه آموزشی درس سیستم‌عامل — الگوریتم FCFS
